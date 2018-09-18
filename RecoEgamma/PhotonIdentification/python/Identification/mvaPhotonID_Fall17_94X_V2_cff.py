@@ -11,8 +11,8 @@ from RecoEgamma.PhotonIdentification.Identification.mvaPhotonID_tools import *
 mvaTag = "RunIIFall17v2"
 mvaVariablesFile = "RecoEgamma/PhotonIdentification/data/PhotonMVAEstimatorRun2VariablesFall17V1p1.txt"
 mvaWeightFiles = [
-    path.join(weightFileBaseDir, "Fall17/EB_V2.weights.xml.gz"),
-    path.join(weightFileBaseDir, "Fall17/EE_V2.weights.xml.gz"),
+    "RecoEgamma/PhotonIdentification/data/Fall17/EB_V2.weights.xml.gz",
+    "RecoEgamma/PhotonIdentification/data/Fall17/EE_V2.weights.xml.gz"
     ]
 # Set up the VID working point parameters
 wpConfig = [
