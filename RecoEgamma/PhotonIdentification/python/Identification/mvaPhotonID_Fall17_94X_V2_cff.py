@@ -9,7 +9,7 @@ from RecoEgamma.PhotonIdentification.Identification.mvaPhotonID_tools import *
 # https://indico.cern.ch/event/697079/contributions/2968123/attachments/1632966/2604131/PhotonID_EGM_13.04.2018.pdf
 #
 mvaTag = "RunIIFall17v2"
-mvaVariablesFile = "RecoEgamma/PhotonIdentification/data/PhotonMVAEstimatorRun2VariablesFall17V1p1.txt"
+mvaVariablesFile = "RecoEgamma/PhotonIdentification/data/PhotonMVAEstimatorRun2VariablesFall17V2.txt"
 mvaWeightFiles = [
     "RecoEgamma/PhotonIdentification/data/Fall17/EB_V2.weights.xml.gz",
     "RecoEgamma/PhotonIdentification/data/Fall17/EE_V2.weights.xml.gz"
@@ -34,10 +34,7 @@ wpConfig = [
 configs = configureFullVIDMVAPhoID(mvaTag=mvaTag,
                                    variablesFile=mvaVariablesFile,
                                    weightFiles=mvaWeightFiles,
-                                   wpConfig=wpConfig,
-                                   # Category parameters
-                                   nCategories         = cms.int32(2),
-                                   categoryCuts        = category_cuts)
+                                   wpConfig=wpConfig)
 mvaPhoID_RunIIFall17_v2_producer_config = configs["producer_config"]
 mvaPhoID_RunIIFall17_v2_wp90            = configs["VID_config"]["mvaPhoID-RunIIFall17-v2-wp90"]
 mvaPhoID_RunIIFall17_v2_wp80            = configs["VID_config"]["mvaPhoID-RunIIFall17-v2-wp80"]
